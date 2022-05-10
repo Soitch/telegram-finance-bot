@@ -14,7 +14,7 @@ from middlewares import AccessMiddleware
 
 logging.basicConfig(level=logging.INFO)
 
-API_TOKEN = os.getenv("TELEGRAM_API_TOKEN")
+API_TOKEN = os.getenv("API_TQKEN")
 #ACCESS_ID = os.getenv("TELEGRAM_ACCESS_ID")
 
 bot = Bot(token=API_TOKEN)

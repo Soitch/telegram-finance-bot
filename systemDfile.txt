@@ -1,0 +1,16 @@
+[Unit]
+Description=Telegrambot
+After=network.target
+
+[Service]
+Type=simple
+User=root
+Environment=VIRTUAL_ENV=/home/admin-bot/djvenv
+Environment=PYTHONPATH=/home/admin-bot/FinanceBotProject/telegram-finance-bot
+#WorkingDirectory=/home/admin-bot
+ExecStart=/home/admin-bot/djvenv/bin/python3  /home/admin-bot/FinanceBotProject/telegram-finance-bot/server.py --serve-in-foregroun>
+Restart=always
+RestartSec=20
+
+[Install]
+WantedBy=multi-user.target

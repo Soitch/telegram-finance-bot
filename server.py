@@ -1,10 +1,11 @@
-#! /usr/local/bin/python3 
+#!/usr/bin/env python3
 """Сервер Telegram бота, запускаемый непосредственно"""
 import logging
 import os
 
 import aiohttp
 from aiogram import Bot, Dispatcher, executor, types
+
 
 import exceptions
 import expenses
@@ -17,7 +18,7 @@ logging.basicConfig(level=logging.INFO)
 API_TOKEN = os.getenv("API_TQKEN")
 #ACCESS_ID = os.getenv("TELEGRAM_ACCESS_ID")
 
-bot = Bot(token=API_TOKEN)
+bot = Bot(token='1853965399:AAGUujqTdDa8LDLndzFC4Cj5Rqyc5hQEAdo')
 dp = Dispatcher(bot)
 #dp.middleware.setup(AccessMiddleware(ACCESS_ID))
 

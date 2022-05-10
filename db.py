@@ -4,7 +4,7 @@ from typing import Dict, List, Tuple
 import sqlite3
 
 
-conn = sqlite3.connect(os.path.join("db", "finance.db"))
+conn = sqlite3.connect(os.path.join("/home/admin-bot/FinanceBotProject/telegram-finance-bot/db", "finance.db"))
 cursor = conn.cursor()
 
 
@@ -45,7 +45,7 @@ def get_cursor():
 
 def _init_db():
     """Инициализирует БД"""
-    with open("createdb.sql", "r") as f:
+    with open("/home/admin-bot/FinanceBotProject/telegram-finance-bot/createdb.sql", "r") as f:
         sql = f.read()
     cursor.executescript(sql)
     conn.commit()
